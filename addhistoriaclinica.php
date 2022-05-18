@@ -1,5 +1,6 @@
 <?php
 include("conexion.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,8 +32,10 @@ include("conexion.php");
     <div class="container">
         <div class="content">
             <h2>Historia Clinca</h2>
+
             <form class="form" action="insert.php" method="POST">
                 <div class="container">
+
                     <div class="row">
                         <div class="col-md">
                             <div role="tabpanel">
@@ -57,6 +60,16 @@ include("conexion.php");
                                             data-toggle="tab" role="tab">Conducta</a></li>
                                     <li role="presentation"><a href="#Ajuntos" aria-controls="Ajuntos" data-toggle="tab"
                                             role="tab">Adjuntar archivos</a></li>
+                                    <li>
+                                        <label class="col-md-2 control-label">&nbsp;</label>
+                                    </li>
+                                    <div class="row">
+                                        <a class="btn btn-primary btn-sm" name="finalizar" data-toggle="modal"
+                                            data-target="#guardar"><span class="glyphicon  glyphicon-ok"></span></a>
+                                        <a class="btn btn-danger btn-primary btn-sm" name="cancelar" data-toggle="modal"
+                                            data-target="#cancelar"><span
+                                                class="glyphicon  glyphicon-remove"></span></a>
+                                    </div>
                                 </ul>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="Inicio">
@@ -102,18 +115,14 @@ include("conexion.php");
                                 </div>
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="form-group">
-                        <label class="col-sm-8 control-label">&nbsp;</label>
-                        <div class="col-md">
-                            <input type="submit" name="addhistoriaclinica" class="btn  btn-primary"
-                                value="Guardar datos">
-                            <a href="index.php" class="btn  btn-danger">Cancelar</a>
-                        </div>
-                    </div>
+
                 </div>
 
             </form>
@@ -121,7 +130,8 @@ include("conexion.php");
     </div>
 
 
-
+    <!-- Modal -->
+    <?php include("modal.php");?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
